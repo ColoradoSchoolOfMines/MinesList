@@ -2,8 +2,19 @@
   <title>AppDevelopment</title>
 </head>
 
-<body>
-  <h1>Welcome to Meteor!</h1>
-  <h2>Login Button</h2>
-  {{> loginButtons}}
-</body>
+<template name="Profile">
+	<h1>PROFILE</h1>
+	Hi {{user.username}}
+</template>
+
+<template name="Home">
+	<body>
+	  <h1>YOU ARE HOME</h1>
+	  <h1>Welcome to Meteor!</h1>
+	  <h2>Login Button</h2>
+	  {{> loginButtons}}
+	  {{#if currentUser}}
+		  <a href="/profile/daking">my profile</a>
+	  {{/if}}
+	</body>
+</template>
