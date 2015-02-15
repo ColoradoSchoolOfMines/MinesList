@@ -13,3 +13,10 @@ Router.route('/profile/:_id', function () {
     }
   });
 });
+
+Router.route('thisPost', {
+	path: '/post/:id',
+	data: function(){
+		return posts.findOne(this.params.id);
+	}
+});

@@ -1,2 +1,5 @@
 /* CSS declarations go here */
 /*added*/
+.post{
+	border: 1px solid #ccc;
+}
