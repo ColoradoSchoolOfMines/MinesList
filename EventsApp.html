@@ -2,14 +2,43 @@
   <title>AppDevelopment</title>
 </head>
 
-<!-- <template name="Home">
-	<body>
-	  <h1>YOU ARE HOME</h1>
-	  <h1>Welcome to Meteor!</h1>
-	  <h2>Login Button</h2>
-	  {{> loginButtons}}
-	  {{#if currentUser}}
-		  <a href="/profile/daking">my profile</a>
-	  {{/if}}
-	</body>
-</template> -->
+<template name="Posts">
+	{{#each posts}}
+		<ul class="post">
+			<li><u><b>{{title}}</b></u> by {{author}}</li>
+		<img src="{{imgURL}}" width="500" height="auto" />
+		<li>{{description}}</li>
+		<li>Time : {{time}}</li>
+		<li>Location : {{location}}</li>
+		</ul>
+	{{/each}}
+</template>
+
+<template name="newPost">
+	{{#if currentUser}}
+	<form class="newPostForm">
+		<div>Add new Event</div>
+		<div>Title:</div>
+		<input type="text" name="newtitle">
+		<div>Description:</div>
+		<textarea name="newdescription" id="" cols="50" rows="10"></textarea>
+		<div>Image URL:</div>
+		<input type="text" name="newimgURL" value="http://i.imgur.com/Ep4lPQT.jpg">
+		<div>Time:</div>
+		<input type="text" name="newtime">
+		<div>Location:</div>
+		<input type="text" name="newlocation"><br/>
+		<input type="submit" value="Add Event">
+	</form>
+	{{/if}}
+</template>
+
+<template name="thisPost">
+		<ul class="post">
+			<li><u><b>{{title}}</b></u> by {{author}}</li>
+		<img src="{{imgURL}}" width="500" height="auto" />
+		<li>{{description}}</li>
+		<li>Time : {{time}}</li>
+		<li>Location : {{location}}</li>
+		</ul>
+</template>
