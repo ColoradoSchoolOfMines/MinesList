@@ -1,0 +1,20 @@
+<!-- home.html -->
+
+<template name="home">
+	<p>
+		This is the home page.
+	</p>
+
+	{{> loginButtons }}
+
+	<p>
+		Users:
+	</p>
+	<ul>
+		{{#each users}}
+			<li>
+				<a href="{{ pathFor 'profile' userId=this._id }}">{{ username }}</a>
+			</li>
+		{{/each}}
+	</ul>
+</template>
