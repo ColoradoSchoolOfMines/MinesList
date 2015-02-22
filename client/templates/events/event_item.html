@@ -1,4 +1,11 @@
 <template name="eventItem">
+		{{#if currentUser}}
+			{{#if rsvped}}
+				<div class="unrsvp">Cancel</div>
+			{{else}}
+				<div class="rsvp">RSVP</div>
+			{{/if}}
+		{{/if}}
 		<ul class="event">
 			<li><u><b>{{title}}</b></u> by {{author.username}}</li>
 			<img src="{{img_url}}" width="500" height="auto" />
