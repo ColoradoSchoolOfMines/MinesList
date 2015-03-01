@@ -7,7 +7,9 @@ Meteor.methods({
 			time: e.time,
 			location: e.location,
 			img_url: e.imgURL,
-			rsvp_users: []
+			rsvp_users: [],
+			created_at: new Date(),
+			cancel: { is_cancelled: false, reason: '' }
 		});
 	},
 	'RSVP': function(userId, eventId){
@@ -34,8 +36,6 @@ Meteor.methods({
         });
 	},
 	'unRSVP': function(userId, eventId){
-		console.log("calling this method");
-
 		Events.update(
 		{
 			_id: eventId
@@ -55,5 +55,18 @@ Meteor.methods({
             rsvp_events : eventId
           }
         });
+	},
+	'cancelEvent': function(options) {
+		Events.update(
+			{
+				_id: options.eventId
+			},
+			{
+				$set: {
+					"cancel.is_cancelled": true,
+					"cancel.reason": options.reason
+				}
+			}
+		);
 	}
 });

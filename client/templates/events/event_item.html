@@ -6,6 +6,10 @@
 				<div class="rsvp">RSVP</div>
 			{{/if}}
 		{{/if}}
+		{{#if isAuthor}}
+			<div class="cancel-event">Cancel</div>
+			{{> eventCancelForm}}
+		{{/if}}
 		<ul class="event">
 			<li><u><b>{{title}}</b></u> by {{author.username}}</li>
 			<img src="{{img_url}}" width="500" height="auto" />
