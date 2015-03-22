@@ -1,5 +1,17 @@
-Template.eventNew.helpers({
+Session.set('uploadUrl', null);
 
+Template.eventNew.helpers({
+	finishedUpload: function() {
+    return {
+        finished: function(index, fileInfo, context) { 
+        	console.log(fileInfo.url);
+        	Session.set('uploadUrl', fileInfo.url);
+         }
+    }
+  },
+  getUploadUrl: function(){
+  	return Session.get('uploadUrl');
+  }
 });
 
 Template.eventNew.events({

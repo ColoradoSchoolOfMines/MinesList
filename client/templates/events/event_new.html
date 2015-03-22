@@ -7,7 +7,8 @@
 			<div><label>Description:</label></div>
 			<textarea name="description" id="" cols="50" rows="10"></textarea>
 			<div><label>Image URL:</label></div>
-			<input type="text" name="imgURL" value="http://i.imgur.com/Ep4lPQT.jpg">
+			{{> upload_semanticUI callbacks=finishedUpload}}
+			<input type="text" name="imgURL" value="{{getUploadUrl}}">
 			<div><label>Time:</label></div>
 			<input type="text" name="time">
 			<div><label>Location:</label></div>

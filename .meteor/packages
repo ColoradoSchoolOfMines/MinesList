@@ -10,3 +10,5 @@ insecure
 accounts-ui
 accounts-password
 iron:router
+tomi:upload-server
+tomi:upload-jquery
