@@ -3,5 +3,5 @@ Meteor.publish('users', function() {
 });
 
 Meteor.publish('events', function() {
-	return Events.find();
+	return Events.find({},  { sort: { created_at: 1 } });
 });
