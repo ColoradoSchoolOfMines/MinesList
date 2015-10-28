@@ -1,7 +1,19 @@
 <template name="layout">
-	<p>HEADER</p>
+    <!-- header -->
+	<div class="row">
+        <!--logo-->
+        <div class="one column">&nbsp;</div>
+        <div class="ten columns" id="logo">
+            <a href="{{ pathFor 'home' }}">
+                <img src="img/logo.png" height="auto">
+            </a>
+        </div>
+        <div class="one column">&nbsp;</div>
+    </div>
+
 	<div>
 		{{> yield}}
 	</div>
-	<p>FOOTER</p>
+
+    <p>&copy;</p>
 </template>
