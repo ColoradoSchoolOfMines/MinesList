@@ -3,8 +3,8 @@
 .columns {
 }
 
-html { 
-  background: url(img/bg.jpg) no-repeat center center fixed; 
+html {
+  background: url(img/bg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -54,4 +54,9 @@ body{
 
 .clear {
 	clear: both;
+}
+
+#footer {
+	text-align: center;
+	color: #fff;
 }

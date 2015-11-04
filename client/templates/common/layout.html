@@ -1,5 +1,6 @@
 <template name="layout">
     <!-- header -->
+    <div class="container">
 	<div class="row">
         <!--logo-->
         <div class="one column">&nbsp;</div>
@@ -15,5 +16,12 @@
 		{{> yield}}
 	</div>
 
-    <p>&copy;</p>
+    <div class="row">
+    <div class="one column">&nbsp;</div>
+        <div class="ten columns" id="footer">
+            <p>&copy; Patrick Soblewski</p>
+        </div>
+        <div class="one column">&nbsp;</div>
+    </div>
+    </div>
 </template>
