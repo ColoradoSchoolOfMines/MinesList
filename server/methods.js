@@ -4,10 +4,9 @@ Meteor.methods({
 			title: e.title,
 			author: Meteor.user(),
 			description: e.desc,
-			time: e.time,
 			location: e.location,
 			img_url: e.imgURL,
-			rsvp_users: [],
+			offers: [],
 			created_at: new Date(),
 			cancel: { is_cancelled: false, reason: '' }
 		});
@@ -66,9 +65,13 @@ Meteor.methods({
 			{
 				$set: {
 					"cancel.is_cancelled": true,
-					"cancel.reason": options.reason
+				//	"cancel.reason": options.reason
 				}
+
 			}
 		);
+		Events.remove({
+			_id : options.eventId
+		});
 	}
 });
