@@ -16,9 +16,13 @@ Template.eventItem.events({
 	'click .unrsvp':function(){
 		Meteor.call('unRSVP',Meteor.userId(), this._id);
 	},
-	'click .cancel-event': function(e) {
-		var $this = $(e.target);
-		$this.next(".cancel-event-form").toggleClass("hide show");
+	'click .cancel-event': function() {
+		var options = {
+			eventId: this._id,
+		}
+		console.log("id:" + options["eventId"]);
+		//$this.next(".cancel-event-form").toggleClass("hide show");
+		Meteor.call('cancelEvent', options)
 	},
 	'submit .cancel-event-form': function(e) {
 		e.preventDefault();
@@ -33,3 +37,4 @@ Template.eventItem.events({
 		}
 	}
 });
+
