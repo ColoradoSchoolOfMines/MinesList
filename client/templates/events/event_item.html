@@ -1,20 +1,42 @@
 <template name="eventItem">
+
 		{{#if currentUser}}
+<!-- Change to if offered or something of the sort
 			{{#if rsvped}}
 				<div class="unrsvp">Cancel</div>
 			{{else}}
 				<div class="rsvp">RSVP</div>
 			{{/if}}
+-->
+
 		{{/if}}
 		{{#if isAuthor}}
 			<div class="cancel-event">Delete</div>
 <!--			{{> eventCancelForm}} -->
 		{{/if}}
-		<ul class="event">
+<!--		<ul class="event">
 			<li><u><b>{{title}}</b></u> by {{author.username}}</li>
 			<img src="{{img_url}}" width="500" height="auto" />
 			<li>{{description}}</li>
-			<li>Time : {{time}}</li>
 			<li>Location : {{location}}</li>
 		</ul>
+-->
+
+	    <div class="post">
+	        <div class="pic">
+	        	{{#if img_url}}
+	            	<img src="{{img_url}}" width="auto">
+	            {{else}}
+	            	<img src="img/post1.jpg" width="auto">
+	            {{/if}}
+	        </div>
+	        <div class="excerpt">
+	            <div class="title">{{title}}</div>
+	            <div>
+	                <p>{{description}}</p>
+	            </div>
+	            <div>Location: {{location}}</div>
+	        </div>
+	        <div class="clear"></div>
+	    </div>
 </template>
