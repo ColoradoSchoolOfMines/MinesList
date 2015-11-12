@@ -8,7 +8,7 @@
 			<textarea name="description" id="" cols="50" rows="10"></textarea>
 			<div><label>Image URL:</label></div>
 			{{> upload_semanticUI callbacks=finishedUpload}}
-			<input type="text" name="imgURL" value="{{getUploadUrl}}">
+			<input class="hidden" type="text" name="imgURL" value="{{getUploadUrl}}">
 			<div><label>Location:</label></div>
 			<input type="text" name="location"><br>
 			<input type="submit" value="Add Event">
