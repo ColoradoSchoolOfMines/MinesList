@@ -20,7 +20,7 @@ Template.eventItem.events({
 		var options = {
 			eventId: this._id,
 		}
-		console.log("id:" + options["eventId"]);
+		window.confirm("Are you sure?");
 		//$this.next(".cancel-event-form").toggleClass("hide show");
 		Meteor.call('cancelEvent', options)
 	},
