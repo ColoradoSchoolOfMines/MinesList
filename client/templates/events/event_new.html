@@ -1,7 +1,7 @@
 <template name="eventNew">
 	{{#if currentUser}}
 		<form>
-			<div>Add new Event</div>
+			<div>Add new Item</div>
 			<div><label>Title:</label></div>
 			<input type="text" name="title">
 			<div><label>Description:</label></div>
@@ -11,7 +11,7 @@
 			<input class="hidden" type="text" name="imgURL" value="{{getUploadUrl}}">
 			<div><label>Location:</label></div>
 			<input type="text" name="location"><br>
-			<input type="submit" value="Add Event">
+			<input class="button" type="submit" value="Add Item">
 		</form>
 	{{/if}}
 </template>
