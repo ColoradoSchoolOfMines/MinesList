@@ -16,16 +16,18 @@ Template.postNew.helpers({
 
 Template.postNew.events({
 	'submit form': function(post) {
+		console.dir(post);
 		post.preventDefault();
 		var p = {
 			title: post.target.title.value,
-			imgURL: post.target.imgURL.value,
+			//imgURL: post.target.imgURL.value,
 			desc: post.target.description.value,
 			location: post.target.location.value
 		}
 		
 		console.log("title");
 		console.log("check");
+		console.dir(p);
 		Meteor.call('insertPost', p);
 	}
 });

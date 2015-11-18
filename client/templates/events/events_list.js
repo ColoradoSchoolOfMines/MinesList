@@ -1,11 +1,11 @@
-Template.eventsList.helpers({
-	'events': function() {
-		return Events.find();
-	}
-});
+// Template.postItem.helpers({
+// 	'events': function() {
+// 		return Posts.find();
+// 	}
+// });
 
-Template.eventsList.events({
-	'click .post': function(event) {
-		Router.go('event', { eventId: this._id });
-	}
-});
+// Template.postItem.events({
+// 	'click .post': function(post) {
+// 		Router.go('event', { postId: this._id });
+// 	}
+// });
