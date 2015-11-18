@@ -79,7 +79,7 @@ body{
 
 /* Overriding the skeleton CSS */
 .button {
-  color: white !important;
+  color: #a3a69f !important;
 }
 
 .button:hover {
@@ -90,4 +90,27 @@ body{
 
 .post {
   color: #a3a59f !important;
+}
+
+.newPost{
+	background-color: white;
+	color: #ABAAAA;
+	padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 30px;
+
+}
+
+.buttonSubmit{
+	background-color: #ec7064 !important;
+	color: white !important;
+	border: 0px !important;
+}
+
+.buttonSubmit:hover {
+  background-color: #ed4e3e !important;
+  color: white !important;
+  transition: all .6s ease;
+  border: 0px !important;
 }
