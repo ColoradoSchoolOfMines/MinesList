@@ -1,3 +1,4 @@
 .meteor/local
 .meteor/meteorite
 .uploads/
+.DS_Store

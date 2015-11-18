@@ -18,8 +18,15 @@
 		{{/each}}
 	</ul>
 
-	{{> eventNew }}
+	{{> postNew }}
 
 	<h1>ITEMS</h1>
-	{{> eventsList }}
+	<div class="row">
+    <!--posts-->
+        <div class="one column">&nbsp;</div>
+        <div class="ten columns">
+	{{> postsList }}
+		</div>
+	</div>
+
 </template>
