@@ -5,7 +5,7 @@ Template.eventsList.helpers({
 });
 
 Template.eventsList.events({
-	'click .event': function(event) {
+	'click .post': function(event) {
 		Router.go('event', { eventId: this._id });
 	}
 });

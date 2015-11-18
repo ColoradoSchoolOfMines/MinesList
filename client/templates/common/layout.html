@@ -6,14 +6,20 @@
         <div class="one column">&nbsp;</div>
         <div class="ten columns" id="logo">
             <a href="{{ pathFor 'home' }}">
-                <img src="img/logo.png" height="auto">
+                <img src="/img/logo.png" height="auto">
             </a>
         </div>
         <div class="one column">&nbsp;</div>
     </div>
 
-	<div>
+	<div class="row">
+        <div class="one column">&nbsp;</div>
+
+            <div class="ten columns">
 		{{> yield}}
+        <div class="one column">&nbsp;</div>
+    </div>
+
 	</div>
 
     <div class="row">

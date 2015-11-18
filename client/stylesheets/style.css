@@ -24,11 +24,18 @@ body{
 	font-size: 1.6em;
 }
 
-.favorite {
-    float: right;
-    color: #f0a1a3;
-    font-size: 30px;
-    padding-left: 10px;
+.favoriteStar {
+  float: right;
+  font-size: 30px;
+  padding-left: 10px;
+}
+
+.favorited {
+  color: #f0a1a3;
+}
+
+.unfavorited {
+  color: #ddd;
 }
 
 .post {
@@ -56,7 +63,8 @@ body{
 .excerpt {
     min-width: 200px;
     padding: 20px;
-    padding-right: 20px;
+    padding-right: 40px;
+    padding-left: 40px;
     text-align: justify;
 }
 
