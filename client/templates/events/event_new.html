@@ -1,17 +1,17 @@
 <template name="eventNew">
 	{{#if currentUser}}
 		<form>
-			<div>Add new Event</div>
+			<div>Add new Item</div>
 			<div><label>Title:</label></div>
 			<input type="text" name="title">
 			<div><label>Description:</label></div>
 			<textarea name="description" id="" cols="50" rows="10"></textarea>
 			<div><label>Image URL:</label></div>
 			{{> upload_semanticUI callbacks=finishedUpload}}
-			<input type="text" name="imgURL" value="{{getUploadUrl}}">
+			<input class="hidden" type="text" name="imgURL" value="{{getUploadUrl}}">
 			<div><label>Location:</label></div>
 			<input type="text" name="location"><br>
-			<input type="submit" value="Add Event">
+			<input class="button" type="submit" value="Add Item">
 		</form>
 	{{/if}}
 </template>

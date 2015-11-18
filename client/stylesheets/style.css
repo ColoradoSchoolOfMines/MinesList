@@ -17,7 +17,8 @@ html {
 }
 
 body{
-	color: #a3a59f !important;
+	/* color: #a3a59f !important; */
+  color: white;
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
 	font-size: 1.6em;
@@ -66,4 +67,19 @@ body{
 #footer {
 	text-align: center;
 	color: #fff;
+}
+
+/* Overriding the skeleton CSS */
+.button {
+  color: white !important;
+}
+
+.button:hover {
+  background-color: white;
+  color: #a3a59f !important;
+  transition: all .6s ease;
+}
+
+.post {
+  color: #a3a59f !important;
 }
