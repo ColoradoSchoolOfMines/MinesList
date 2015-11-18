@@ -1,7 +1,7 @@
 Meteor.publish('users', function() {
-	return Meteor.users.find({_id:this.userId}, {fields:{rsvp_events:1}});
+	return Meteor.users.find({_id:this.userId});
 });
 
-Meteor.publish('events', function() {
-	return Events.find({},  { sort: { created_at: 1 } });
+Meteor.publish('posts', function() {
+	return Posts.find({},  { sort: { created_at: 1 } });
 });

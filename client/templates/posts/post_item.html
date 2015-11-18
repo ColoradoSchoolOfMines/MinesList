@@ -1,20 +1,4 @@
-<template name="eventItem">
-
-		{{#if currentUser}}
-<!-- Change to if offered or something of the sort
-			{{#if rsvped}}
-				<div class="unrsvp">Cancel</div>
-			{{else}}
-				<div class="rsvp">RSVP</div>
-			{{/if}}
--->
-
-		{{/if}}
-		{{#if isAuthor}}
-			<div class="cancel-event">Delete</div>
-<!--			{{> eventCancelForm}} -->
-		{{/if}}
-
+<template name="postItem">
 	    <div class="post">
 	        <div class="pic">
 	        	{{#if img_url}}
@@ -24,11 +8,12 @@
 	            {{/if}}
 	        </div>
 	        <div class="excerpt">
+	        	<i class="fa fa-star favorite"></i>
 	            <div class="title">{{title}}</div>
 	            <div>
 	                <p>{{description}}</p>
 	            </div>
-	            <div>Location: {{location}}</div>
+	            <div>Location: {{location}}</div> <!--Do we need?-->
 	        </div>
 	        <div class="clear"></div>
 	    </div>
