@@ -1,3 +1,11 @@
+<head>
+	<!-- Scripts and stylesheets to get fancy tags -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js'></script>
+	<script type="text/javascript" src="/app/client/helpers/jquery.tagsinput.js"></script>
+
+</head>
+
 <template name="postNew">
 	{{#if currentUser}}
   <div class="row">
@@ -15,8 +23,16 @@
 			<input  class="u-full-width" type="text" name="Asking"><br>
             <div><label>Location:</label></div>
 			<input class="u-full-width" type="text" name="location"><br>
+			<div><label>Tags:</label></div>
+			<input class="tags u-full-width" type="text" name="tags"><br>
 			<input class="buttonSubmit" type="submit" value="Add Item">
 		</form>
         </div>
+
+		<script type="text/javascript">
+			// Actual call to attach special tag properties
+			$('.tags').tagsInput({width:'auto'});
+		</script>
+
 	{{/if}}
 </template>
