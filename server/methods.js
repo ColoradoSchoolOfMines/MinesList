@@ -6,7 +6,7 @@ Meteor.methods({
 			description: p.desc,
 			location: p.location,
 			img_url: p.imgURL,
-			offers: [],
+			tags: p.tags,
 			created_at: new Date(),
 			cancel: { is_cancelled: false, reason: '' }
 		});

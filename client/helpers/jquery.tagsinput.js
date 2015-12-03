@@ -18,6 +18,14 @@
 
 (function($) {
 
+	// Make tagslist accessible globally
+	this.getTagslist = function(){
+		if(tagslist) {
+	    	return tagslist;
+	    }
+	}
+
+	var tagslist = new Array();
 	var delimiter = new Array();
 	var tags_callbacks = new Array();
 	$.fn.doAutosize = function(o){
@@ -81,7 +89,7 @@
 			this.each(function() {
 				var id = $(this).attr('id');
 
-				var tagslist = $(this).val().split(delimiter[id]);
+				tagslist = $(this).val().split(delimiter[id]);
 				if (tagslist[0] == '') {
 					tagslist = new Array();
 				}

@@ -22,7 +22,8 @@ Template.postNew.events({
 			title: post.target.title.value,
 			//imgURL: post.target.imgURL.value,
 			desc: post.target.description.value,
-			location: post.target.location.value
+			location: post.target.location.value,
+			tags: getTagslist(),
 		}
 		
 		console.log("title");
