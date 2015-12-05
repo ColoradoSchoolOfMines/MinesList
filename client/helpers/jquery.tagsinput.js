@@ -206,8 +206,6 @@
 
     	var uniqueIdCounter = 0;
 
-    	console.log("Type: " + typeof this)
-
 		this.each(function() {
          // If we have already initialized the field, do not do it again
          if (typeof $(this).attr('data-tagsinput-init') !== 'undefined') {
@@ -274,7 +272,28 @@
 					$(event.data.fake_input).css('color','#000000');
 				});
 
-				if (settings.autocomplete_url != undefined) {
+				// Custom autocomplete logic
+				console.log("settings: " + settings.autocomplete_data);
+				if(settings.autocomplete_data != undefined) {
+					autocomplete_options = {source: settings.autocomplete_data};
+
+					if (jQuery.Autocompleter !== undefined) {
+						$(data.fake_input).autocomplete(settings.autocomplete_data, settings.autocomplete);
+						$(data.fake_input).bind('result',data,function(event,data,formatted) {
+							if (data) {
+								$('#'+id).addTag(data[0] + "",{focus:true,unique:(settings.unique)});
+							}
+					  	});
+					} else if (jQuery.ui.autocomplete !== undefined) {
+						$(data.fake_input).autocomplete(autocomplete_options);
+						$(data.fake_input).bind('autocompleteselect',data,function(event,ui) {
+							$(event.data.real_input).addTag(ui.item.value,{focus:true,unique:(settings.unique)});
+							return false;
+						});
+					}
+				}
+
+				else if (settings.autocomplete_url != undefined) {
 					autocomplete_options = {source: settings.autocomplete_url};
 					for (attrname in settings.autocomplete) {
 						autocomplete_options[attrname] = settings.autocomplete[attrname];

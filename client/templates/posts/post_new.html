@@ -1,7 +1,7 @@
 <head>
 	<!-- Scripts and stylesheets to get fancy tags -->
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js'></script>
+	<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
 	<script type="text/javascript" src="/app/client/helpers/jquery.tagsinput.js"></script>
 
 </head>
@@ -31,7 +31,10 @@
 
 		<script type="text/javascript">
 			// Actual call to attach special tag properties
-			$('.tags').tagsInput({width:'auto'});
+			$('.tags').tagsInput({
+				width:'auto',
+				autocomplete_data: getAutocompleteList(),
+			});
 		</script>
 
 	{{/if}}
