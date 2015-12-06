@@ -275,7 +275,10 @@
 				// Custom autocomplete logic
 				console.log("settings: " + settings.autocomplete_data);
 				if(settings.autocomplete_data != undefined) {
-					autocomplete_options = {source: settings.autocomplete_data};
+					autocomplete_options = {
+						source: settings.autocomplete_data,
+						appendTo: ".tagsinput div"
+					};
 
 					if (jQuery.Autocompleter !== undefined) {
 						$(data.fake_input).autocomplete(settings.autocomplete_data, settings.autocomplete);
