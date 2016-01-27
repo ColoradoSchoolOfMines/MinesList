@@ -20,7 +20,7 @@ Template.postNew.events({
 		post.preventDefault();
 		var p = {
 			title: post.target.title.value,
-			//imgURL: post.target.imgURL.value,
+			imgURL: post.target.imgURL.value,
 			desc: post.target.description.value,
 			location: post.target.location.value,
 			tags: getTagslist(),
@@ -30,5 +30,6 @@ Template.postNew.events({
 		console.log("check");
 		console.dir(p);
 		Meteor.call('insertPost', p);
+		Router.go('/');
 	}
 });
