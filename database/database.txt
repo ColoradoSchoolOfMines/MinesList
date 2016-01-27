@@ -1,0 +1,35 @@
+Users
+_____
+id
+first/last name
+posts[]
+favoritePosts[]
+rating
+contactInfo{
+    email
+    phone
+}
+offers[]
+favorites[]
+
+
+Posts
+_____
+id
+user
+offers[]
+description
+timestamp
+description
+tags[]
+pictures[4?]
+expirationDate
+status
+
+
+
+Offer
+_____
+id
+offer
+timestamp
