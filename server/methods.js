@@ -22,6 +22,7 @@ Meteor.methods({
 
 		if (!alreadyExists) {
 			Meteor.users.update({ _id: Meteor.user()._id },{ $push: { favorites: post }});
+			console.log("adding to favorites");
 		}
 	}
 });
