@@ -2,13 +2,13 @@ Template.postItem.helpers({
 	'events': function() {
 		return Posts.find();
 	},
+
     'isFavorited': function() {
         favorited = false;
-        console.log("this post id: " + this._id);
+        thisPost = this;
 
         Meteor.user().favorites.forEach(function(favPost) {
-            console.log("favorite post id: " + favPost._id);
-            if (favPost._id == this._id) {
+            if (favPost._id == thisPost._id) {
                 favorited = true;
             }
         });
@@ -18,10 +18,15 @@ Template.postItem.helpers({
 });
 
 Template.postItem.events({
-	'click .post': function(post) {
+	'click .post': function() {
 		Router.go('post', { postId: this._id });
 	},
-    'click .favoriteStar': function() {
+
+    'click .not-favorite': function() {
         Meteor.call("favoritePost", this);
+    },
+
+    'click .favorite': function() {
+        Meteor.call("unfavoritePost", this);
     }
 });

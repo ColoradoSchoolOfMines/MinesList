@@ -23,10 +23,13 @@
 	            {{/if}}
             </div>
             <div class="excerpt">
-                {{ #if isFavorited }}
-                    <i class="fa fa-star unFavoriteStar unFavorited">FAVORITED</i>
-                {{ else }}
-                    <i class="fa fa-star favoriteStar favorited">NOT FAVORITED</i>
+
+                {{ #if currentUser }}
+                    {{ #if isFavorited }}
+                        <i class="fa fa-star favoriteStar favorite"></i>
+                    {{ else }}
+                        <i class="fa fa-star favoriteStar not-favorite"></i>
+                    {{ /if }}
                 {{ /if }}
 
                 <div class="title">{{title}}</div>
