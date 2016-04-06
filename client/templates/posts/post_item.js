@@ -1,8 +1,7 @@
 Template.postItem.helpers({
-	'events': function() {
-		return Posts.find();
-	},
-
+    /**
+     * Checks if the post has been favorited by the current user.
+     */
     'isFavorited': function() {
         favorited = false;
         thisPost = this;
@@ -18,15 +17,34 @@ Template.postItem.helpers({
 });
 
 Template.postItem.events({
+    /**
+     * Redirects to the post's page.
+     */
 	'click .post': function() {
 		Router.go('post', { postId: this._id });
 	},
 
-    'click .not-favorite': function() {
+    /**
+     * Unfavorites the post for the current user.
+     *
+     * @param event The template event
+     */
+    'click .not-favorite': function(event) {
+        // Don't redirect to the post's page.
+        event.stopImmediatePropagation();
+
         Meteor.call("favoritePost", this);
     },
 
-    'click .favorite': function() {
+    /**
+     * Favorites the post for the current user.
+     *
+     * @param event The template event
+     */
+    'click .favorite': function(event) {
+        // Don't redirect to the post's page.
+        event.stopImmediatePropagation();
+
         Meteor.call("unfavoritePost", this);
     }
 });
