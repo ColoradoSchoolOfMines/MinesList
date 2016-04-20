@@ -31,5 +31,9 @@ Template.postNew.events({
 		console.dir(p);
 		Meteor.call('insertPost', p);
 		Router.go('/');
+	},
+
+	'mouseover .uploadPanel': function() {
+    	$(document).find(".jqUploadclass").removeAttr("disabled");
 	}
 });

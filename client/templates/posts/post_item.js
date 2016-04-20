@@ -48,3 +48,5 @@ Template.postItem.events({
         Meteor.call("unfavoritePost", this);
     }
 });
+
+
