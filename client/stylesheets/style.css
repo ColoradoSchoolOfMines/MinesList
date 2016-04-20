@@ -30,11 +30,11 @@ body{
   padding-left: 10px;
 }
 
-.favorited {
+.favorite {
   color: #f0a1a3;
 }
 
-.unfavorited {
+.not-favorite {
   color: #ddd;
 }
 
@@ -116,9 +116,9 @@ body{
 }
 
 div.tagsinput span.tag { border: 1px solid #a5d24a; -moz-border-radius:2px; -webkit-border-radius:2px; display: block; float: left; padding: 5px; text-decoration:none; background: #cde69c; color: #638421; margin-right: 5px; margin-bottom:5px;font-family: helvetica;  font-size:13px;}
-div.tagsinput span.tag a { font-weight: bold; color: #82ad2b; text-decoration:none; font-size: 11px;  } 
+div.tagsinput span.tag a { font-weight: bold; color: #82ad2b; text-decoration:none; font-size: 11px;  }
 div.tagsinput input { width:80px; margin:0px; font-family: helvetica; font-size: 13px; border:1px solid transparent; padding:0px; background: transparent; color: #000; outline:0px;  margin-right:5px; margin-bottom:5px; }
-div.tagsinput div { display:block; float: left; } 
+div.tagsinput div { display:block; float: left; }
 div .tagsinput {
     height: 38px;
     padding: 6px 10px;
@@ -135,7 +135,7 @@ div .tagsinput {
   border: 1px solid;
   border-bottom: none;
   list-style: none;
-  
+
   background: #fff;
   list-style-type: none;
 }

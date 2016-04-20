@@ -23,7 +23,15 @@
 	            {{/if}}
             </div>
             <div class="excerpt">
-                <i class="fa fa-star favoriteStar favorited"></i>
+
+                {{ #if currentUser }}
+                    {{ #if isFavorited }}
+                        <i class="fa fa-star favoriteStar favorite"></i>
+                    {{ else }}
+                        <i class="fa fa-star favoriteStar not-favorite"></i>
+                    {{ /if }}
+                {{ /if }}
+
                 <div class="title">{{title}}</div>
                 <div>
                     <p>{{description}}</p>
