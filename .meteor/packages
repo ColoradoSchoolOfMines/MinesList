@@ -11,7 +11,6 @@ accounts-password
 iron:router
 tomi:upload-server
 tomi:upload-jquery
-standard-minifiers
 meteor-base
 mobile-experience
 mongo
@@ -27,3 +26,5 @@ spacebars
 check
 sanjo:jasmine
 velocity:html-reporter
+standard-minifier-css
+standard-minifier-js
