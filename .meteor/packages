@@ -25,3 +25,5 @@ random
 ejson
 spacebars
 check
+sanjo:jasmine
+velocity:html-reporter

@@ -28,6 +28,9 @@ The following files are here.
 * Server
   * methods.js: Writes the output for posts, users, etc to MongoDB database.
 
+### Testing
+Using Velocity for Jasmin JS (http://experimentsinmeteor.com/meteor-testing-with-velocity-and-jasmine-part-1/index.html)
+
 ### How to Run
 
 
